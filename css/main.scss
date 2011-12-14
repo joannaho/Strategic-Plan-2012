@@ -3,11 +3,6 @@
 :: Strategic Plan 2012 Stylesheet
 :: Author: Joanna Lit
 ---------------------------------------------------*/
-//@import "globals.css";
-//@import "typography.css";
-//@import "grid.css";
-//@import "orbit.css";
-@import "reveal.css";
 @import "foundation.css";
 @import "mobile.css";
 
@@ -16,7 +11,6 @@
 -------------------------------------------------- */
 $acsdarkblue:#0153A5;
 $acsdarkyellow:#E5B100;
-//$goal1color:#34164B;
 $goal1color:#331549;
 $goal2color:#555555;
 $goal3color:#9FC2C6;
@@ -500,7 +494,7 @@ nav {
 		@include transition(all ,2s, linear);
 		&.windill {
 			&.lrg { 
-				background-position:-61px -3px;
+				background-position:-15px -3px;
 				width:90px;
 				height:90px;
 				top:31px;
@@ -511,7 +505,7 @@ nav {
 				}
 			}
 			&.med { 
-				background-position:-72px -112px;
+				background-position:-24px -112px;
 				width:61px;
 				height:61px;
 				top:87px;
@@ -522,7 +516,7 @@ nav {
 				}
 			}
 			&.sm { 
-				background-position:-81px -185px;
+				background-position:-36px -185px;
 				width:41px;
 				height:41px;
 				top:122px;
@@ -532,27 +526,31 @@ nav {
 					left:764px;
 				}
 			}
-			-moz-animation: windmillAnimation 5s infinite linear;
-			-webkit-animation: windmillAnimation 20s infinite linear;
-			-ms-animation: windmillAnimation 10s infinite linear;
+			&.animation { 
+				-moz-animation: windmillAnimation 5s infinite linear;
+				-webkit-animation: windmillAnimation 20s infinite linear;
+				-ms-animation: windmillAnimation 10s infinite linear;
+			}
 		}
 		&.balloon { 
-			background-position:-28px -247px;
+			background-position:18px -247px;
 			width:126px;
 			height:101px;
 			top:98px;
 			left:680px;
-			-moz-animation: balloonAnimation 3s infinite alternate linear both;
-			-webkit-animation: balloonAnimation 3s infinite alternate linear both;
-			-ms-animation: balloonAnimation 3s infinite alternate linear both;
-			-o-animation: balloonAnimation 3s infinite alternate linear both;
+			&.animation { 
+				-moz-animation: balloonAnimation 3s infinite alternate linear both;
+				-webkit-animation: balloonAnimation 3s infinite alternate linear both;
+				-ms-animation: balloonAnimation 3s infinite alternate linear both;
+				-o-animation: balloonAnimation 3s infinite alternate linear both;
+			}
 		}
-		&.cloud1 { 
-			background-position:-169px 0;
-			width:130px;
-			height:170px;
-			top:650px;
-			left:20px;
+		//&.cloud1 { 
+		//	background-position:-169px 0;
+		//	width:130px;
+		//	height:170px;
+		//	top:650px;
+		//	left:20px;
 			//top:500px;
 			//left:-10px;
 			//opacity:0;
@@ -561,11 +559,11 @@ nav {
 			//-webkit-animation: cloud1Animation 25s infinite normal ease-in-out forwards;
 			//-ms-animation: cloud1Animation 25s infinite normal ease-in-out forwards;
 			//-o-animation: cloud1Animation 25s infinite normal ease-in-out forwards;
-		}
-		&.cloud2 { 
-			background-position:-298px 0px;
-			width:120px;
-			height:170px;
+		//}
+		//&.cloud2 { 
+		//	background-position:-298px 0px;
+		//	width:120px;
+		//	height:170px;
 			//top:230px;
 			//left:765px;
 			top:301px;
@@ -575,40 +573,46 @@ nav {
 			//-webkit-animation: cloud2Animation 30s infinite normal ease-in-out forwards;
 			//-ms-animation: cloud2Animation 30s infinite normal ease-in-out none;
 			//-o-animation: cloud2Animation 30s infinite normal ease-in-out none;
-		}
-		&.cloud3 { 
-			background-position:-204px -213px;
-			width:215px;
-			height:100px;
-			top:860px;
-			left:405px;
+		//}
+		//&.cloud3 { 
+		//	background-position:-204px -213px;
+		//	width:215px;
+		//	height:100px;
+		//	top:860px;
+		//	left:405px;
 			//opacity:0;
 			//-moz-animation: cloud3Animation 35s infinite normal ease-in-out forwards;
 			//-webkit-animation: cloud3Animation 35s infinite normal ease-in-out forwards;
 			//-ms-animation: cloud3Animation 35s infinite normal ease-in-out forwards;
 			//-o-animation: cloud3Animation 35s infinite normal ease-in-out forwards;
-		}
+		//}
 		&.cloud4 { 
-			background-position:-204px -323px;
+			background-position:-130px -191px;
 			width:226px;
 			height:277px;
 			top:470px;
 			left:745px;
-			-moz-animation: cloud4Animation 30s infinite normal ease-in-out forwards;
-			-webkit-animation: cloud4Animation 30s infinite normal ease-in-out forwards;
-			-ms-animation: cloud4Animation 30s infinite normal ease-in-out forwards;
-			-o-animation: cloud4Animation 30s infinite normal ease-in-out forwards;
+			opacity:0;
+			&.animation { 
+				-moz-animation: cloud4Animation 30s infinite normal ease-in-out forwards;
+				-webkit-animation: cloud4Animation 30s infinite normal ease-in-out forwards;
+				-ms-animation: cloud4Animation 30s infinite normal ease-in-out forwards;
+				-o-animation: cloud4Animation 30s infinite normal ease-in-out forwards;
+			}
 		}
 		&.cloud5 { 
-			background-position:-1px -376px;
+			background-position:-130px -18px;
 			width:201px;
 			height:170px;
 			top:755px;
 			left:110px;
-			-moz-animation: cloud5Animation 25s infinite normal ease-in-out forwards;
-			-webkit-animation: cloud5Animation 25s infinite normal ease-in-out forwards;
-			-ms-animation: cloud5Animation 25s infinite normal ease-in-out forwards;
-			-o-animation: cloud5Animation 25s infinite normal ease-in-out forwards;
+			opacity:0;
+			&.animation { 
+				-moz-animation: cloud5Animation 25s infinite normal ease-in-out forwards;
+				-webkit-animation: cloud5Animation 25s infinite normal ease-in-out forwards;
+				-ms-animation: cloud5Animation 25s infinite normal ease-in-out forwards;
+				-o-animation: cloud5Animation 25s infinite normal ease-in-out forwards;
+			}
 		}
 	}
 } 
@@ -884,11 +888,11 @@ dl.tabs {
 	}
 	&.jobs { 
 		background-image:url(../images/box-bg-networking.jpg); 
-		background-position:55px -17px; 
+		background-position:200% -17px; 
 	}
 	&.nobel { 
 		background-image:url(../images/box-bg-noble.jpg); 
-		background-position:-8px 7px;
+		background-position:85% 7px;
 		.num { 
 			text-align:left;
 			padding-left:0.9em; 
@@ -896,11 +900,11 @@ dl.tabs {
 	}
 	&.flag { 
 		background-image:url(../images/box-bg-flag.jpg); 
-		background-position:33px -3px; 
+		background-position:right -3px; 
 	}
 	&.capital { 
 		background-image:url(../images/box-bg-capital.jpg); 
-		background-position:67px -28px; 
+		background-position:right -28px; 
 	}
 }
 

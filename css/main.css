@@ -3,7 +3,6 @@
 :: Strategic Plan 2012 Stylesheet
 :: Author: Joanna Lit
 ---------------------------------------------------*/
-@import url(reveal.css);
 @import url(foundation.css);
 @import url(mobile.css);
 /*--------------------------------------------------
@@ -683,86 +682,75 @@ nav {
     -moz-transition: all 2s linear;
     -o-transition: all 2s linear;
     -ms-transition: all 2s linear;
-    transition: all 2s linear; }
-    #corevalue .sprite.windill {
+    transition: all 2s linear;
+    top: 301px;
+    left: 791px; }
+    #corevalue .sprite.windill.lrg {
+      background-position: -15px -3px;
+      width: 90px;
+      height: 90px;
+      top: 31px;
+      left: 418px; }
+      #corevalue .sprite.windill.lrg.btm {
+        top: 819px;
+        left: 739px; }
+    #corevalue .sprite.windill.med {
+      background-position: -24px -112px;
+      width: 61px;
+      height: 61px;
+      top: 87px;
+      left: 412px; }
+      #corevalue .sprite.windill.med.btm {
+        top: 781px;
+        left: 750px; }
+    #corevalue .sprite.windill.sm {
+      background-position: -36px -185px;
+      width: 41px;
+      height: 41px;
+      top: 122px;
+      left: 407px; }
+      #corevalue .sprite.windill.sm.btm {
+        top: 757px;
+        left: 764px; }
+    #corevalue .sprite.windill.animation {
       -moz-animation: windmillAnimation 5s infinite linear;
       -webkit-animation: windmillAnimation 20s infinite linear;
       -ms-animation: windmillAnimation 10s infinite linear; }
-      #corevalue .sprite.windill.lrg {
-        background-position: -61px -3px;
-        width: 90px;
-        height: 90px;
-        top: 31px;
-        left: 418px; }
-        #corevalue .sprite.windill.lrg.btm {
-          top: 819px;
-          left: 739px; }
-      #corevalue .sprite.windill.med {
-        background-position: -72px -112px;
-        width: 61px;
-        height: 61px;
-        top: 87px;
-        left: 412px; }
-        #corevalue .sprite.windill.med.btm {
-          top: 781px;
-          left: 750px; }
-      #corevalue .sprite.windill.sm {
-        background-position: -81px -185px;
-        width: 41px;
-        height: 41px;
-        top: 122px;
-        left: 407px; }
-        #corevalue .sprite.windill.sm.btm {
-          top: 757px;
-          left: 764px; }
     #corevalue .sprite.balloon {
-      background-position: -28px -247px;
+      background-position: 18px -247px;
       width: 126px;
       height: 101px;
       top: 98px;
-      left: 680px;
-      -moz-animation: balloonAnimation 3s infinite alternate linear both;
-      -webkit-animation: balloonAnimation 3s infinite alternate linear both;
-      -ms-animation: balloonAnimation 3s infinite alternate linear both;
-      -o-animation: balloonAnimation 3s infinite alternate linear both; }
-    #corevalue .sprite.cloud1 {
-      background-position: -169px 0;
-      width: 130px;
-      height: 170px;
-      top: 650px;
-      left: 20px; }
-    #corevalue .sprite.cloud2 {
-      background-position: -298px 0px;
-      width: 120px;
-      height: 170px;
-      top: 301px;
-      left: 791px; }
-    #corevalue .sprite.cloud3 {
-      background-position: -204px -213px;
-      width: 215px;
-      height: 100px;
-      top: 860px;
-      left: 405px; }
+      left: 680px; }
+      #corevalue .sprite.balloon.animation {
+        -moz-animation: balloonAnimation 3s infinite alternate linear both;
+        -webkit-animation: balloonAnimation 3s infinite alternate linear both;
+        -ms-animation: balloonAnimation 3s infinite alternate linear both;
+        -o-animation: balloonAnimation 3s infinite alternate linear both; }
     #corevalue .sprite.cloud4 {
-      background-position: -204px -323px;
+      background-position: -130px -191px;
       width: 226px;
       height: 277px;
       top: 470px;
       left: 745px;
-      -moz-animation: cloud4Animation 30s infinite normal ease-in-out forwards;
-      -webkit-animation: cloud4Animation 30s infinite normal ease-in-out forwards;
-      -ms-animation: cloud4Animation 30s infinite normal ease-in-out forwards;
-      -o-animation: cloud4Animation 30s infinite normal ease-in-out forwards; }
+      opacity: 0; }
+      #corevalue .sprite.cloud4.animation {
+        -moz-animation: cloud4Animation 30s infinite normal ease-in-out forwards;
+        -webkit-animation: cloud4Animation 30s infinite normal ease-in-out forwards;
+        -ms-animation: cloud4Animation 30s infinite normal ease-in-out forwards;
+        -o-animation: cloud4Animation 30s infinite normal ease-in-out forwards; }
     #corevalue .sprite.cloud5 {
-      background-position: -1px -376px;
+      background-position: -130px -18px;
       width: 201px;
       height: 170px;
       top: 755px;
       left: 110px;
-      -moz-animation: cloud5Animation 25s infinite normal ease-in-out forwards;
-      -webkit-animation: cloud5Animation 25s infinite normal ease-in-out forwards;
-      -ms-animation: cloud5Animation 25s infinite normal ease-in-out forwards;
-      -o-animation: cloud5Animation 25s infinite normal ease-in-out forwards; }
+      opacity: 0; }
+      #corevalue .sprite.cloud5.animation {
+        -moz-animation: cloud5Animation 25s infinite normal ease-in-out forwards;
+        -webkit-animation: cloud5Animation 25s infinite normal ease-in-out forwards;
+        -ms-animation: cloud5Animation 25s infinite normal ease-in-out forwards;
+        -o-animation: cloud5Animation 25s infinite normal ease-in-out forwards; }
 
 /* -----------------------------------------
    Goals
@@ -1023,19 +1011,19 @@ dl.tabs {
     font-size: 0.95em; }
   .progress-block.jobs {
     background-image: url(../images/box-bg-networking.jpg);
-    background-position: 55px -17px; }
+    background-position: 200% -17px; }
   .progress-block.nobel {
     background-image: url(../images/box-bg-noble.jpg);
-    background-position: -8px 7px; }
+    background-position: 85% 7px; }
     .progress-block.nobel .num {
       text-align: left;
       padding-left: 0.9em; }
   .progress-block.flag {
     background-image: url(../images/box-bg-flag.jpg);
-    background-position: 33px -3px; }
+    background-position: right -3px; }
   .progress-block.capital {
     background-image: url(../images/box-bg-capital.jpg);
-    background-position: 67px -28px; }
+    background-position: right -28px; }
 
 .extras a {
   background: #555555;
