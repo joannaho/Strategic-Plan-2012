@@ -3,7 +3,6 @@
  * Authoured: Joanna Lit
  * Date: Dec 14, 2011
  */
- 
 $(document).ready(function() {
 	var $navVM = $('nav .vm');
 	var $navCore = $('nav .core');
@@ -33,7 +32,6 @@ $(document).ready(function() {
         }
 	});
 
-	
 	updatePos();
 	checkWidth();
 	checkCurrPos();
@@ -169,8 +167,7 @@ $(document).ready(function() {
 	    		});
 	    		g2loadcount++
 	    	}
-			//shuffle function - random background image
-			shuffle = function(o){ //v1.0
+			shuffle = function(o){ //shuffle function - random background image
 				for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
 				return o;
 			};
@@ -214,7 +211,32 @@ $(document).ready(function() {
   		{xparallax:false, xtravel:'5px', ytravel:'5px'} //layer 2
   	);
 
+	//tabs
+	var tabs = $('dl.tabs');
+		tabsContent = $('ul.tabs-content')
+	tabs.each(function(i) {
+		//Get all tabs
+		var tab = $(this).children('dd').children('a');
+		tab.click(function(e) {
+			//Get Location of tab's content
+			var contentLocation = $(this).attr("href")
+			contentLocation = contentLocation + "Tab";
+
+			//Let go if not a hashed one
+			if(contentLocation.charAt(0)=="#") {
+				e.preventDefault();
 			
+				//Make Tab Active
+				tab.removeClass('active');
+				$(this).addClass('active');
+				
+				//Show Tab Content
+				$(contentLocation).parent('.tabs-content').children('li').css({"display":"none"});
+				$(contentLocation).css({"display":"block"});
+			} 
+		});
+	});
+
 	//Lightbox 
 	var $extraBtn = $('.extras a');
 	$extraBtn.live('click', revealBox);
@@ -243,6 +265,8 @@ $(document).ready(function() {
 			$f(sectionID +"player").stop();
 		}
 	}
+	
+	
 	
 });
 
