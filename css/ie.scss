@@ -1,0 +1,279 @@
+/* -------------------------------------------------- 
+:: ie.scss
+:: Strategic Plan 2012 IE Stylesheet
+:: Author: Joanna Lit
+---------------------------------------------------*/
+div.panel { border: 1px solid #ccc; }
+
+
+/*--------------------------------------------------
+:: Color
+-------------------------------------------------- */
+$acsdarkblue:#0153A5;
+$acsdarkyellow:#E5B100;
+
+$goal1color:#34164B;
+$goal1intro:#331549;
+$goal2color:#555555;
+$goal3color:#9FC2C6;
+$goal3intro:#9ec2c5;
+$goal4color:#11396A;
+$goal4intro:#12396c;
+
+$skyblue:#c8dfea;
+$navbarcolor:#ddb846;
+
+$btnradius:4px;
+
+@mixin gradient-linear($from, $to) { 
+	background-color: $to;
+  	background: -moz-linear-gradient($from, $to);
+  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+  	background: -webkit-linear-gradient($from, $to);
+  	background: -o-linear-gradient($from, $to);	
+	background: -ms-radial-gradient(center, ellipse cover, $from 0%,$to 100%);
+	background: radial-gradient(center, ellipse cover, $from 0%,$to 100%);
+	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
+}
+@mixin gradient-radial($to, $from) { 
+	background: $to;
+	background: -moz-radial-gradient(center, ellipse cover,  $from 25%, $to 70%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(25%,$from), color-stop(70%,$to));
+	background: -webkit-radial-gradient(center, ellipse cover,  $from 25%,$to 70%);
+	background: -o-radial-gradient(center, ellipse cover, $from 25%,$to 70%);
+	background: -ms-radial-gradient(center, ellipse cover, $from 25%,$to 70%);
+	background: radial-gradient(center, ellipse cover, $from 25%,$to 70%);
+	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
+}
+
+/* -----------------------------------------
+   Header
+----------------------------------------- */
+* html,* html body /* IE6 Fixed Position Jitter Fix */{
+	background-image:url(about:blank);
+	background-attachment:fixed;
+}
+* html header {
+	position:absolute;
+	bottom:auto;
+	top:expression(eval(document.documentElement.scrollTop));
+}
+
+.hd { 
+	.acslogo { 
+	    position:absolute;
+	    z-index:9999;
+		top:14px;
+		left:16px;
+		_left:-205px;
+		_background:transparent url('../images/acs-logo.png') no-repeat scroll 0 0;
+		width:157px;
+		height:54px;
+	}
+	.hd-corner { 
+	    *border:none;
+	    *background:url(../images/logo-hex.gif) no-repeat scroll left bottom;
+	    *width:220px;
+	    *height:120px;
+	    *left:-17px;
+	} 
+}
+
+nav { 
+	*top:-110px;
+	ul { 
+		li {
+			&.g1, &.g2, &.g3, &.g4 {
+				display:inline;
+				_background:#666 url('../images/nav-bg-circle.gif') no-repeat scroll 0 0;
+			}
+		}
+	}
+}
+
+
+
+#visionmission { 
+	_height:420px;
+	_padding-top:0;
+	.title { 
+		_top:150px;
+	}
+	.vision, .mission { 
+		_top:180px;
+	}
+}
+
+
+/* -----------------------------------------
+   Core
+----------------------------------------- */
+#corevalue {
+	h1 { 
+		left:220px;
+	}
+	.col-l, .col-r { 
+		_width:190px; 
+	}
+	.col-l { 
+		_left:155px;
+	} 
+	.col-r { 
+		_left:400px;
+	} 
+	.graphic-earth { 
+		_background:url(../images/core-earth-ie.jpg) no-repeat scroll 0 0;
+		_width:905px;
+		_height:949px;
+	}
+	.sprite { 
+		_display:none;
+	}
+}
+
+/* -----------------------------------------
+   Goals
+----------------------------------------- */
+#goals { 
+	.hex {
+		_background-image:url('../images/goals-sprite-hex.gif');
+		h4 { 
+			padding-bottom:0;
+		}
+		a { 
+			display:block !important;
+			width:110px;
+			margin:auto;
+			_display:inline;
+			*zoom:1;
+			*padding:0px 10px 8px 15px; /*IE7 below*/
+			*border:1px solid #c5d4e7;
+			.btnLearnMore {
+				_background:transparent url('../images/sprite.gif') no-repeat scroll 5px 0;
+				margin-top:-7px;
+				*margin-top:0;
+				top:7px;
+				*top:4px; /*IE7 below*/
+			}
+		}
+	}
+}
+
+.elements { 
+	_background-image:url('../images/goals-sprite.gif');
+}
+
+/* -----------------------------------------
+   Goals Detail
+----------------------------------------- */
+.goal-intro {
+	_height:400px;
+	.row { 
+		.goalNum {
+			_display:inline; 
+			_width:20%;
+			//*margin-top:-1em;
+			line-height:1em;
+			.num { *line-height:1em; /**margin-bottom:-35px;*/ }
+		}
+		.goalHd { 
+			_width:50%;
+		}
+	}
+}
+
+#goal1 {
+	.goal-intro {
+		*background:$goal1color url('../images/goal1-bg.jpg') no-repeat scroll 30% -168px;
+		_background:$goal1color url('../images/goal1-bg-ie.jpg') no-repeat scroll right -100px;
+		.sprite { _display:none; }		
+	}
+}
+#goal2 {
+	.sprite-wrap { 
+		left:0;
+	}
+	.goal-intro {
+		_background:$goal2color url('../images/goal2-bg-ie.jpg') no-repeat scroll center center;
+		.sprite { _display:none; }		
+	}
+}
+
+#goal3 { 
+	.goal-intro { 
+		_background:$goal3color url('../images/goal3-sprite.gif') no-repeat scroll 640px 50px;
+		.row { 
+			.goalHd { _width:40%; }
+		}
+	}
+} 
+
+dl.tabs { *margin:2.5em 0 0; }
+
+.goal-content { 
+	.columns { 
+		_display:inline; 
+	}
+	.eight { 
+		_width:68%;
+		_float:left;
+	}
+	.four { 
+		_width:30%;
+		_float:right;
+	}
+}
+dl.tabs { 
+	_display:none;
+}
+.tabs-content { 
+	clear:both;
+	h6 { _display:block; }
+	li { margin-bottom:0;
+		li { 
+			_margin:0 !important;
+		}
+	}
+}
+
+.goalDesNav li {
+	display:inline-block;
+	background: -ms-linear-gradient(top,  #f7f7f7 0%,#d6d6d6 100%); /* IE10+ */
+	background: linear-gradient(top,  #f7f7f7 0%,#d6d6d6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#d6d6d6',GradientType=0 ); /* IE6-9 */
+	border:1px solid #ccc;
+}
+.goalDesNav li.active { 
+	background: -ms-linear-gradient(top,  #5195e0 0%,#11396a 100%); /* IE10+ */
+	background: linear-gradient(top,  #5195e0 0%,#11396a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5195e0', endColorstr='#11396a',GradientType=0 ); /* IE6-8 */
+}
+
+.extras a { 
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU1NTU1NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMjIyMjIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -ms-linear-gradient(top,  #555555 0%,#222222 100%); /* IE10+ */
+	background: linear-gradient(top,  #555555 0%,#222222 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#555555', endColorstr='#222222',GradientType=0 ); /* IE6-8 */
+	&:hover {
+		/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+		background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzUxOTVlMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxMTM5NmEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: -ms-linear-gradient(top,  #5195e0 0%,#11396a 100%); /* IE10+ */
+		background: linear-gradient(top,  #5195e0 0%,#11396a 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5195e0', endColorstr='#11396a',GradientType=0 ); /* IE6-8 */
+	}
+	span { 
+		_background:transparent url('../images/sprite.gif') no-repeat scroll 100px 100px; 
+	}
+
+}
+
+
+.progress-heading { 
+	color:#777;
+}
+.progress-block { 
+	_height:210px;
+	_width:23%;
+	_margin-right:15px;
+}
