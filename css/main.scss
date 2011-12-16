@@ -4,11 +4,10 @@
 :: Author: Joanna Lit
 ---------------------------------------------------*/
 @import "foundation.css";
-@import "mobile.css";
 
-/*--------------------------------------------------
-:: Color
--------------------------------------------------- */
+//--------------------------------------------------
+// Color
+//-------------------------------------------------- 
 $acsdarkblue:#0153A5;
 $acsdarkyellow:#E5B100;
 $goal1color:#331549;
@@ -29,8 +28,6 @@ $btnradius:4px;
   	background: -o-linear-gradient($from, $to);	
 	background: -ms-linear-gradient(top, $from 0%,$to 100%);
 	background: linear-gradient(top, $from 0%,$to 100%);
-	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=0 );
-	//zoom: 1;      
 }
 @mixin gradient-radial($to, $from) { 
 	background: $to;
@@ -40,8 +37,6 @@ $btnradius:4px;
 	background: -o-radial-gradient(center, ellipse cover, $from 25%,$to 70%);
 	background: -ms-radial-gradient(center, ellipse cover, $from 25%,$to 70%);
 	background: radial-gradient(center, ellipse cover, $from 25%,$to 70%);
-	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
-	//zoom: 1;      
 }
 
 @mixin transition($property, $time, $easing) {
@@ -142,14 +137,13 @@ $btnradius:4px;
 }
 
 
-/* -----------------------------------------
-   Shared Styles
------------------------------------------ */
+// -----------------------------------------
+//   Shared Styles
+//----------------------------------------- */
 body { 
 	font:13px/1.231 "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	color:#333;
 }
-
 h1, h2, h3, h4, h5, h6 { font-weight:400; }
 h1 { }
 h2 { margin:0 0 0.25em 0; font-size:2.75em; font-weight:200; }
@@ -171,10 +165,9 @@ section { clear:both; }
 	width:100%;
 }
 
-
-/* -----------------------------------------
-   Header
------------------------------------------ */
+// -----------------------------------------
+//   Header
+//----------------------------------------- */
 header { 
 	position:fixed;
 	top:0;
@@ -266,6 +259,7 @@ nav {
 			&.current, &:hover {
 				background-image:url('../images/nav-bg-on.gif');
 				background-repeat:repeat-x;
+				background-color:none;
 				a { text-shadow:0 1px 2px #000000; }
 			}
 			&:hover { 
@@ -294,8 +288,6 @@ nav {
 					&:hover { color:#fff; }
 				}
 			}
-			&.g1 a, &.g2 a, &.g3 a, &.g4 a {
-			}
 			&.g1 a:hover, &.g1.current a { background-color:#5e437a; }
 			&.g2 a:hover, &.g2.current a { background-color:#373737; }
 			&.g3 a:hover, &.g3.current a { background-color:#9ec2c5; }
@@ -306,9 +298,9 @@ nav {
 	select { display:none; margin-top:5px; width:100px; }
 }
 
-/* -----------------------------------------
-   Core Value
------------------------------------------ */
+// -----------------------------------------
+//   Core Value
+//----------------------------------------- */
 #visionmission, #core, #goals { position:relative; }
 #visionmission { 
 	z-index:3;
@@ -325,7 +317,7 @@ nav {
 		.sp12 { 
 			color:$acsdarkblue;
 			position:relative; 
-			left:150px;
+			left:15%;
 		}
 		.andbeyond { 
 			color:$acsdarkyellow; 
@@ -405,7 +397,6 @@ nav {
 		position:absolute;
 		z-index:1;
 	}
-	
 	.sprite { 
 		position:absolute;
 		background:transparent url(../images/core-sprite.png) no-repeat scroll 0 0;
@@ -497,9 +488,9 @@ nav {
 } 
 
 
-/* -----------------------------------------
-   Goals
------------------------------------------ */
+// -----------------------------------------
+//   Goals
+//----------------------------------------- */
 #goals { 
 	z-index:2;
 	height:950px;
@@ -602,7 +593,6 @@ nav {
 	}
 }
 
-	
 .elements { 
 	background-color: transparent;
 	//background-image:url('../images/goals-sprite.png');
@@ -650,9 +640,9 @@ nav {
 	z-index:3;
 }	
 
-/* -----------------------------------------
-   Goals Detail
------------------------------------------ */
+// -----------------------------------------
+//   Goals Detail
+//----------------------------------------- */
 dl.tabs dd a { 
 	border:1px solid #ccc;
 	color:#444;
@@ -753,7 +743,7 @@ dl.tabs {
 		text-shadow:0 1px 0px #fff;
 		padding:0.4em 0 0.3em;
 		font-size:4em;
-		&.small { font-size:3em; line-height:1.65em; }
+		&.small { font-size:3em; line-height:1.65em; text-align:center; }
 		span { 
 			display:block;
 			font-size:0.4em;
@@ -838,7 +828,7 @@ dl.tabs {
 }
 
 
-/* Goal Specific */
+// Goal Specific
 #goal1 .goal-intro {
 	background-color:$goal1color;
 	.bg { 

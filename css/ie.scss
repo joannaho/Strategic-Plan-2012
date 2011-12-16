@@ -5,13 +5,8 @@
 ---------------------------------------------------*/
 div.panel { border: 1px solid #ccc; }
 
-
-/*--------------------------------------------------
-:: Color
--------------------------------------------------- */
 $acsdarkblue:#0153A5;
 $acsdarkyellow:#E5B100;
-
 $goal1color:#34164B;
 $goal1intro:#331549;
 $goal2color:#555555;
@@ -19,36 +14,10 @@ $goal3color:#9FC2C6;
 $goal3intro:#9ec2c5;
 $goal4color:#11396A;
 $goal4intro:#12396c;
-
 $skyblue:#c8dfea;
 $navbarcolor:#ddb846;
-
 $btnradius:4px;
 
-@mixin gradient-linear($from, $to) { 
-	background-color: $to;
-  	background: -moz-linear-gradient($from, $to);
-  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
-  	background: -webkit-linear-gradient($from, $to);
-  	background: -o-linear-gradient($from, $to);	
-	background: -ms-radial-gradient(center, ellipse cover, $from 0%,$to 100%);
-	background: radial-gradient(center, ellipse cover, $from 0%,$to 100%);
-	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
-}
-@mixin gradient-radial($to, $from) { 
-	background: $to;
-	background: -moz-radial-gradient(center, ellipse cover,  $from 25%, $to 70%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(25%,$from), color-stop(70%,$to));
-	background: -webkit-radial-gradient(center, ellipse cover,  $from 25%,$to 70%);
-	background: -o-radial-gradient(center, ellipse cover, $from 25%,$to 70%);
-	background: -ms-radial-gradient(center, ellipse cover, $from 25%,$to 70%);
-	background: radial-gradient(center, ellipse cover, $from 25%,$to 70%);
-	//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
-}
-
-/* -----------------------------------------
-   Header
------------------------------------------ */
 * html,* html body /* IE6 Fixed Position Jitter Fix */{
 	background-image:url(about:blank);
 	background-attachment:fixed;
@@ -82,16 +51,30 @@ $btnradius:4px;
 nav { 
 	*top:-110px;
 	ul { 
-		li {
-			&.g1, &.g2, &.g3, &.g4 {
-				display:inline;
-				_background:#666 url('../images/nav-bg-circle.gif') no-repeat scroll 0 0;
+		li { 
+			&.g1, &.g2, &.g3, &.g4 { 
+				padding:0; margin-right:5px; 
+				&.current { 
+					border:none; 
+					a { 
+						font-size:1.5em; padding:2px 8px 11px 8px; _padding:2px 8px 3px 8px;
+					}
+				}
+			}
+			&.g1, &.g2, &.g3, &.g4 { 
+				a { 
+					_display:inline;
+					_background:#666 url('../images/nav-bg-circle.gif') no-repeat scroll 0 0;
+				}
+			}
+			&.vm a:hover, &.vm.current a, &.core a:hover, &.core.current a, &.gmain a:hover, &.gmain.current a { 
+				_background-image:url(../images/nav-bg-on.gif); 
+				_background-repeat:repeat-x; 
+				_background-position:0 -70px; 
 			}
 		}
 	}
 }
-
-
 
 #visionmission { 
 	_height:420px;
@@ -104,10 +87,6 @@ nav {
 	}
 }
 
-
-/* -----------------------------------------
-   Core
------------------------------------------ */
 #corevalue {
 	h1 { 
 		left:220px;
@@ -131,9 +110,6 @@ nav {
 	}
 }
 
-/* -----------------------------------------
-   Goals
------------------------------------------ */
 #goals { 
 	.hex {
 		_background-image:url('../images/goals-sprite-hex.gif');
@@ -158,15 +134,12 @@ nav {
 		}
 	}
 }
-
 .elements { 
 	_background-image:url('../images/goals-sprite.gif');
 	_display:block;
 }
 
-/* -----------------------------------------
-   Goals Detail
------------------------------------------ */
+
 .goal-intro {
 	_height:400px;
 	.row { 
@@ -185,7 +158,7 @@ nav {
 #goal1 {
 	.goal-intro {
 		*background:$goal1color url('../images/goal1-bg.png') no-repeat scroll 30% -168px;
-		_background:$goal1color url('../images/goal1-bg-ie.jpg') no-repeat scroll right -100px;
+		_background:$goal1color url('../images/goal1-bg-ie.jpg') no-repeat scroll 30% -100px;
 		.sprite { _display:none; 
 			&.layer1 { _display:none; }
 		}		
@@ -195,8 +168,9 @@ nav {
 #goal2 {
 	.goal-intro {
 		_background:$goal2color url('../images/goal2-bg-ie.jpg') no-repeat scroll top center;
+		_display:block;
 		.sprite-wrap { 
-			left:0; top:-330px;
+			left:0; top:-130px;
 			.sprite { _display:none; }
 		}
 	}
@@ -204,6 +178,7 @@ nav {
 #goal3 { 
 	.goal-intro { 
 		_background:$goal3color url('../images/goal3-sprite.gif') no-repeat scroll 640px 50px;
+		_display:block;
 		.row { 
 			.goalHd { _width:40%; }
 		}

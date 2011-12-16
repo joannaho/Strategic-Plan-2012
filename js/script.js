@@ -16,6 +16,8 @@ $(document).ready(function() {
 	var $nav = $('nav');
 	var $hexbtn = $('.hex a');
 	
+	var isIE6 = $.browser.msie && parseFloat($.browser.version) < 7;
+
 	$('nav li a').bind('click', scrollNav);
 	$hexbtn.bind('click', scrollNav);
 
@@ -124,16 +126,20 @@ $(document).ready(function() {
 			if(!($navG1.hasClass('.current'))){
 				$navG1.addClass('current').siblings('.current').removeClass('current');
 			} 
-			if(windowWidth > 750 && $goal1bg.css('background-image') == 'none'){
-	    		$('<img/>').attr('src',"images/goal1-bg.jpg").load(function(){
-	    			$goal1bg.css("background-image", "url(images/goal1-bg.jpg)");
-	    			$goal1bg.fadeIn('slow', function(){
-		    			$('<img/>').attr('src',"images/goal1-sprite.png").load(function(){
-			    			$goal1sprite.css("background-image", "url(images/goal1-sprite.png)");
-			    			$goal1sprite.fadeIn('slow');
-			    		});
-	    			});
-	    		});
+			if(/msie|MSIE 6/.test(navigator.userAgent)) {
+				//do nothing
+			}else {
+				if(windowWidth > 750 && $goal1bg.css('background-image') == 'none'){
+		    		$('<img/>').attr('src',"images/goal1-bg.jpg").load(function(){
+		    			$goal1bg.css("background-image", "url(images/goal1-bg.jpg)");
+		    			$goal1bg.fadeIn('slow', function(){
+			    			$('<img/>').attr('src',"images/goal1-sprite.png").load(function(){
+				    			$goal1sprite.css("background-image", "url(images/goal1-sprite.png)");
+				    			$goal1sprite.fadeIn('slow');
+				    		});
+		    			});
+		    		});
+				}
 			}
 		} 
 		else if(currScrollPos >= goal2Pos && currScrollPos < goal3Pos){ //goal 2
@@ -176,11 +182,15 @@ $(document).ready(function() {
 			if(!($navG3.hasClass('current'))){
 				$navG3.addClass('current').siblings('.current').removeClass('current');
 			}
-			if(windowWidth > 750 && $goal3sprite.css('background-image') == 'none'){
-    			$('<img/>').attr('src',"images/goal3-sprite.png").load(function(){
-	    			$goal3sprite.css("background-image", "url(images/goal3-sprite.png)");
-	    			$goal3sprite.fadeIn('slow');
-	    		});
+			if(/msie|MSIE 6/.test(navigator.userAgent)) {
+				//do nothing
+			}else {
+				if(windowWidth > 750 && $goal3sprite.css('background-image') == 'none'){
+	    			$('<img/>').attr('src',"images/goal3-sprite.png").load(function(){
+		    			$goal3sprite.css("background-image", "url(images/goal3-sprite.png)");
+		    			$goal3sprite.fadeIn('slow');
+		    		});
+				}
 			}
 		}
 		else if(currScrollPos >= goal4Pos){ //goal 
@@ -202,7 +212,8 @@ $(document).ready(function() {
 		}
 	}
 	
-	if ($.browser.msie && $.browser.version.substr(0,1)>=7) {
+	if(/msie|MSIE 6/.test(navigator.userAgent)) {
+	}else { 
 		//goal 1 parallax
 	  	jQuery('#goal1 #parallax .sprite').parallax(
 	  		{}, //{mouseport: jQuery("#goal1 #parallax")},
