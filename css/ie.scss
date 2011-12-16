@@ -161,6 +161,7 @@ nav {
 
 .elements { 
 	_background-image:url('../images/goals-sprite.gif');
+	_display:block;
 }
 
 /* -----------------------------------------
@@ -172,9 +173,8 @@ nav {
 		.goalNum {
 			_display:inline; 
 			_width:20%;
-			//*margin-top:-1em;
 			line-height:1em;
-			.num { *line-height:1em; /**margin-bottom:-35px;*/ }
+			.num { *line-height:1em; }
 		}
 		.goalHd { 
 			_width:50%;
@@ -184,21 +184,23 @@ nav {
 
 #goal1 {
 	.goal-intro {
-		*background:$goal1color url('../images/goal1-bg.jpg') no-repeat scroll 30% -168px;
+		*background:$goal1color url('../images/goal1-bg.png') no-repeat scroll 30% -168px;
 		_background:$goal1color url('../images/goal1-bg-ie.jpg') no-repeat scroll right -100px;
-		.sprite { _display:none; }		
+		.sprite { _display:none; 
+			&.layer1 { _display:none; }
+		}		
+		
 	}
 }
 #goal2 {
-	.sprite-wrap { 
-		left:0;
-	}
 	.goal-intro {
-		_background:$goal2color url('../images/goal2-bg-ie.jpg') no-repeat scroll center center;
-		.sprite { _display:none; }		
+		_background:$goal2color url('../images/goal2-bg-ie.jpg') no-repeat scroll top center;
+		.sprite-wrap { 
+			left:0; top:-330px;
+			.sprite { _display:none; }
+		}
 	}
 }
-
 #goal3 { 
 	.goal-intro { 
 		_background:$goal3color url('../images/goal3-sprite.gif') no-repeat scroll 640px 50px;
@@ -207,6 +209,13 @@ nav {
 		}
 	}
 } 
+#goal4 {
+	.goal-intro { 
+		.sprite { 
+			&.element1 { right:-20%; }
+		}
+	}
+}
 
 dl.tabs { *margin:2.5em 0 0; }
 
@@ -276,4 +285,7 @@ dl.tabs {
 	_height:210px;
 	_width:23%;
 	_margin-right:15px;
+	.num {
+		&.small { _line-height:1.65em; _margin:0; }
+	}
 }

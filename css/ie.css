@@ -94,7 +94,8 @@ nav {
       /*IE7 below*/ }
 
 .elements {
-  _background-image: url("../images/goals-sprite.gif"); }
+  _background-image: url("../images/goals-sprite.gif");
+  _display: block; }
 
 /* -----------------------------------------
    Goals Detail
@@ -106,28 +107,33 @@ nav {
     _width: 20%;
     line-height: 1em; }
     .goal-intro .row .goalNum .num {
-      *line-height: 1em;
-      /**margin-bottom:-35px;*/ }
+      *line-height: 1em; }
   .goal-intro .row .goalHd {
     _width: 50%; }
 
 #goal1 .goal-intro {
-  *background: #34164b url("../images/goal1-bg.jpg") no-repeat scroll 30% -168px;
+  *background: #34164b url("../images/goal1-bg.png") no-repeat scroll 30% -168px;
   _background: #34164b url("../images/goal1-bg-ie.jpg") no-repeat scroll right -100px; }
   #goal1 .goal-intro .sprite {
     _display: none; }
+    #goal1 .goal-intro .sprite.layer1 {
+      _display: none; }
 
-#goal2 .sprite-wrap {
-  left: 0; }
 #goal2 .goal-intro {
-  _background: #555555 url("../images/goal2-bg-ie.jpg") no-repeat scroll center center; }
-  #goal2 .goal-intro .sprite {
-    _display: none; }
+  _background: #555555 url("../images/goal2-bg-ie.jpg") no-repeat scroll top center; }
+  #goal2 .goal-intro .sprite-wrap {
+    left: 0;
+    top: -330px; }
+    #goal2 .goal-intro .sprite-wrap .sprite {
+      _display: none; }
 
 #goal3 .goal-intro {
   _background: #9fc2c6 url("../images/goal3-sprite.gif") no-repeat scroll 640px 50px; }
   #goal3 .goal-intro .row .goalHd {
     _width: 40%; }
+
+#goal4 .goal-intro .sprite.element1 {
+  right: -20%; }
 
 dl.tabs {
   *margin: 2.5em 0 0; }
@@ -199,3 +205,6 @@ dl.tabs {
   _height: 210px;
   _width: 23%;
   _margin-right: 15px; }
+  .progress-block .num.small {
+    _line-height: 1.65em;
+    _margin: 0; }

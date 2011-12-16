@@ -13,13 +13,20 @@ $(document).ready(function() {
 	var $navG4 = $('nav .g4');
 	var g2loadcount = 0;
 	var $coresprite = $('#corevalue .sprite');
-
-	//Navigation scrollTo
 	var $nav = $('nav');
-	$('nav li a').click(function() {
-		$nav.find('li').removeClass('current');
-		$(this).parent().addClass('current');
-		
+	var $hexbtn = $('.hex a');
+	
+	$('nav li a').bind('click', scrollNav);
+	$hexbtn.bind('click', scrollNav);
+
+	updatePos();
+	checkWidth();
+	checkCurrPos();
+	
+	$(window).resize(function(){checkWidth();});
+	$(window).scroll(function(){checkCurrPos();});
+	
+	function scrollNav(){
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
         && location.hostname == this.hostname) {
           var $target = $(this.hash);
@@ -30,14 +37,7 @@ $(document).ready(function() {
            		return false;
           	}
         }
-	});
-
-	updatePos();
-	checkWidth();
-	checkCurrPos();
-	
-	$(window).resize(function(){checkWidth();});
-	$(window).scroll(function(){checkCurrPos();});
+	}
 	
 	function updatePos(){
 		homePos = $('#visionmission').offset().top;
@@ -105,24 +105,20 @@ $(document).ready(function() {
 			if(!($navGoals.hasClass('.current'))){
 				$navGoals.addClass('current').siblings('.current').removeClass('current');
 			}
-			if(windowWidth > 750 && $goalsSprite.css('background-image') == 'none'){
-	    		$('<img/>').attr('src',"images/goals-sprite.png").load(function(){
-	    			$goalsSprite.css("background-image", "url(images/goals-sprite.png)");
-	    			$goalsSprite.fadeIn('slow');
-	    		});
-	    		
-				//.parallax(object, xPosition, adjuster, inertia, outerHeight) options:
-				//object - background or position
-				//xPosition - Horizontal position of the element
-				//adjuster - y position to start from
-				//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
-				//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-				$('#goals .sphere1').vparallax("position","75%", 3600, 0.3, true);
-				$('#goals .sphere2').vparallax("position","-5%", 2400, 0.5, true);
-				$('#goals .sphere3').vparallax("position","80%", 500, 0.2, true);
-				$('#goals .sphere4').vparallax("position","0%", 1000, 0.2, true);
-				$('#goals .sprite5').vparallax("position","87%", 3000, 0.1, true);
-	    	}
+			if(/msie|MSIE 6/.test(navigator.userAgent)) {
+			}else{
+				if(windowWidth > 750 && $goalsSprite.css('background-image') == 'none'){
+		    		$('<img/>').attr('src',"images/goals-sprite.png").load(function(){
+		    			$goalsSprite.css("background-image", "url(images/goals-sprite.png)");
+		    			$goalsSprite.fadeIn('slow');
+		    		});
+					$('#goals .sphere1').vparallax("position","75%", 3600, 0.3, true);
+					$('#goals .sphere2').vparallax("position","-5%", 2400, 0.5, true);
+					$('#goals .sphere3').vparallax("position","80%", 500, 0.2, true);
+					$('#goals .sphere4').vparallax("position","0%", 1000, 0.2, true);
+					$('#goals .sprite5').vparallax("position","87%", 3000, 0.1, true);
+		    	}
+			}
 		}
 		else if(currScrollPos >= goal1Pos && currScrollPos < goal2Pos){ //goal 1
 			if(!($navG1.hasClass('.current'))){
@@ -144,33 +140,37 @@ $(document).ready(function() {
 			if(!($navG2.hasClass('current'))){
 				$navG2.addClass('current').siblings('.current').removeClass('current');
 			}
-			if(windowWidth > 750 && $goal2sprite.css('background-image') == 'none' && g2loadcount < 1){
-	    		$('<img/>').attr('src',"images/goal2-bg.jpg").load(function(){
-	    			
-	    			$goal2sprite.css("background-image", "url(images/goal2-bg.jpg)");
-	    			
-	    			var fadeTimer = setInterval(showRandom, 600);
-					var randorder = shuffle([0,1,2,3,4,5,6,7]);
-					var index = 0;	    			
-	    			
-	    			function showRandom(){
-						var randomNum = (randorder[randorder[index++]]);
-						var $randomSprite = $('#goal2 .sprite-wrap > span:eq('+randomNum+')');
-						
-					   	$randomSprite.fadeTo(800,0.5, function(){
-					 		$(this).fadeTo(800, 0.15);					   	
-					   	});
-						if(randomNum === undefined){
-							clearInterval(fadeTimer);
-						}
-	    			}
-	    		});
-	    		g2loadcount++
-	    	}
-			shuffle = function(o){ //shuffle function - random background image
-				for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-				return o;
-			};
+			if(/msie|MSIE 6/.test(navigator.userAgent)) {
+				//do nothing
+			}else {
+				if(windowWidth > 750 && $goal2sprite.css('background-image') == 'none' && g2loadcount < 1){
+		    		$('<img/>').attr('src',"images/goal2-bg.jpg").load(function(){
+		    			
+		    			$goal2sprite.css("background-image", "url(images/goal2-bg.jpg)");
+		    			
+		    			var fadeTimer = setInterval(showRandom, 600);
+						var randorder = shuffle([0,1,2,3,4,5,6,7]);
+						var index = 0;	    			
+		    			
+		    			function showRandom(){
+							var randomNum = (randorder[randorder[index++]]);
+							var $randomSprite = $('#goal2 .sprite-wrap > span:eq('+randomNum+')');
+							
+						   	$randomSprite.fadeTo(800,0.5, function(){
+						 		$(this).fadeTo(800, 0.15);					   	
+						   	});
+							if(randomNum === undefined){
+								clearInterval(fadeTimer);
+							}
+		    			}
+		    		});
+		    		g2loadcount++
+		    	}
+				shuffle = function(o){ //shuffle function - random background image
+					for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+					return o;
+				};
+			}
 		}
 		else if(currScrollPos >= goal3Pos && currScrollPos < goal4Pos){ //goal 3
 			if(!($navG3.hasClass('current'))){
@@ -202,14 +202,15 @@ $(document).ready(function() {
 		}
 	}
 	
-	
-	//goal 1 parallax
-  	jQuery('#goal1 #parallax .sprite').parallax(
-  		{}, //{mouseport: jQuery("#goal1 #parallax")},
-  		{xparallax:false, xtravel:'10px' ,ytravel:'20px'}, //layer 0
-  		{xparallax:true, xtravel:'20px'}, //layer 1
-  		{xparallax:false, xtravel:'5px', ytravel:'5px'} //layer 2
-  	);
+	if ($.browser.msie && $.browser.version.substr(0,1)>=7) {
+		//goal 1 parallax
+	  	jQuery('#goal1 #parallax .sprite').parallax(
+	  		{}, //{mouseport: jQuery("#goal1 #parallax")},
+	  		{xparallax:false, xtravel:'10px' ,ytravel:'20px'}, //layer 0
+	  		{xparallax:true, xtravel:'20px'}, //layer 1
+	  		{xparallax:false, xtravel:'5px', ytravel:'5px'} //layer 2
+	  	);
+	}
 
 	//tabs
 	var tabs = $('dl.tabs');
@@ -221,16 +222,11 @@ $(document).ready(function() {
 			//Get Location of tab's content
 			var contentLocation = $(this).attr("href")
 			contentLocation = contentLocation + "Tab";
-
 			//Let go if not a hashed one
 			if(contentLocation.charAt(0)=="#") {
 				e.preventDefault();
-			
-				//Make Tab Active
 				tab.removeClass('active');
 				$(this).addClass('active');
-				
-				//Show Tab Content
 				$(contentLocation).parent('.tabs-content').children('li').css({"display":"none"});
 				$(contentLocation).css({"display":"block"});
 			} 
@@ -266,7 +262,4 @@ $(document).ready(function() {
 		}
 	}
 	
-	
-	
 });
-

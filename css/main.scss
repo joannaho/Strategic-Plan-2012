@@ -91,85 +91,6 @@ $btnradius:4px;
 	to { -o-transition:top 1s ease; -o-transition:left 1s ease; top:76px; left:700px;}
 }
 
-
-@-webkit-keyframes cloud1Animation {
-	0% { opacity:0; top:500px; left:-10px; }
-	20% { opacity:1;   }
-	80% { opacity:0.9; }
-	100% { opacity:0; top:650px; left:20px; -moz-transform:rotate(0deg); }
-}
-@-moz-keyframes cloud1Animation {
-	0% { opacity:0; top:500px; left:-10px; }
-	20% { opacity:1;   }
-	80% { opacity:0.9; }
-	100% { opacity:0; top:650px; left:20px; -moz-transform:rotate(0deg); }
-}
-@-ms-keyframes cloud1Animation {
-	0% { opacity:0; top:500px; left:-10px; }
-	20% { opacity:1;   }
-	80% { opacity:0.9; }
-	100% { opacity:0; top:650px; left:20px; -moz-transform:rotate(0deg); }
-}
-@-o-keyframes cloud1Animation {
-	0% { opacity:0; top:500px; left:-10px; }
-	20% { opacity:1;   }
-	80% { opacity:0.9; }
-	100% { opacity:0; top:650px; left:20px; -moz-transform:rotate(0deg); }
-}
-
-
-@-webkit-keyframes cloud2Animation {
-	0% { opacity:0; left:791px; top:301px; -moz-transform:rotate(9deg); }
-	20% { opacity:1; }
-	80% { opacity:0.9; }
-	100% { opacity:0; left:682px; top:140px; -moz-transform: rotate(-18deg); }
-}
-@-moz-keyframes cloud2Animation {
-	0% { opacity:0; left:791px; top:301px; -moz-transform:rotate(9deg); }
-	20% { opacity:1; }
-	80% { opacity:0.9; }
-	100% { opacity:0; left:682px; top:140px; -moz-transform: rotate(-18deg); }
-}
-@-ms-keyframes cloud2Animation {
-	0% { opacity:0; left:791px; top:301px; -moz-transform:rotate(9deg); }
-	20% { opacity:1; }
-	80% { opacity:0.9; }
-	100% { opacity:0; left:682px; top:140px; -moz-transform: rotate(-18deg); }
-}
-@-o-keyframes cloud2Animation {
-	0% { opacity:0; left:791px; top:301px; -moz-transform:rotate(9deg); }
-	20% { opacity:1; }
-	80% { opacity:0.9; }
-	100% { opacity:0; left:682px; top:140px; -moz-transform: rotate(-18deg); }
-}
-
-
-@-webkit-keyframes cloud3Animation {
-	0% { left:405px; }
-	20% { opacity:1; }
-	80% { opacity:0.9; }
-	100% { left:650px; opacity:0; }
-}
-@-moz-keyframes cloud3Animation {
-	0% { left:405px; }
-	20% { opacity:1; }
-	80% { opacity:0.9; }
-	100% { left:650px; opacity:0; }
-}
-@-ms-keyframes cloud3Animation {
-	0% { left:405px; }
-	20% { opacity:1; }
-	80% { opacity:0.9; }
-	100% { left:650px; opacity:0; }
-}
-@-o-keyframes cloud3Animation {
-	0% { left:405px; }
-	20% { opacity:1; }
-	80% { opacity:0.9; }
-	100% { left:650px; opacity:0; }
-}
-
-
 @-webkit-keyframes cloud4Animation {
 	0% { opacity:0; left:690px; }
 	20% { opacity:1; }
@@ -194,7 +115,6 @@ $btnradius:4px;
 	80% { opacity:0.9; }
 	100% { opacity:0; left:805px; }
 }
-
 
 @-webkit-keyframes cloud5Animation {
 	0% { opacity:0; top:775px; left:110px; }
@@ -265,13 +185,13 @@ header {
 
 .hd { 
 	position:relative;
-	z-index:9999;
+	z-index:2000;
 	.row:after { 
 		clear:none;
 	}
 	.acslogo { 
 	    position:absolute;
-	    z-index:9999;
+	    z-index:2000;
 		top:14px;
 		left:16px;
 		background:transparent url('../images/acs-logo.png') no-repeat scroll 0 0;
@@ -286,7 +206,7 @@ header {
 		position: relative; 
 		display:inline-block;
 		float:left;
-	    z-index:9999;
+	    z-index:2000;
 	} 
 	.hd-corner:before { 
 		content: ""; 
@@ -545,47 +465,6 @@ nav {
 				-o-animation: balloonAnimation 3s infinite alternate linear both;
 			}
 		}
-		//&.cloud1 { 
-		//	background-position:-169px 0;
-		//	width:130px;
-		//	height:170px;
-		//	top:650px;
-		//	left:20px;
-			//top:500px;
-			//left:-10px;
-			//opacity:0;
-			//-moz-transform:rotate(13deg);
-			//-moz-animation: cloud1Animation 25s infinite normal ease-in-out forwards;
-			//-webkit-animation: cloud1Animation 25s infinite normal ease-in-out forwards;
-			//-ms-animation: cloud1Animation 25s infinite normal ease-in-out forwards;
-			//-o-animation: cloud1Animation 25s infinite normal ease-in-out forwards;
-		//}
-		//&.cloud2 { 
-		//	background-position:-298px 0px;
-		//	width:120px;
-		//	height:170px;
-			//top:230px;
-			//left:765px;
-			top:301px;
-			left:791px;
-			//opacity:0;
-			//-moz-animation: cloud2Animation 30s infinite normal ease-in-out forwards;
-			//-webkit-animation: cloud2Animation 30s infinite normal ease-in-out forwards;
-			//-ms-animation: cloud2Animation 30s infinite normal ease-in-out none;
-			//-o-animation: cloud2Animation 30s infinite normal ease-in-out none;
-		//}
-		//&.cloud3 { 
-		//	background-position:-204px -213px;
-		//	width:215px;
-		//	height:100px;
-		//	top:860px;
-		//	left:405px;
-			//opacity:0;
-			//-moz-animation: cloud3Animation 35s infinite normal ease-in-out forwards;
-			//-webkit-animation: cloud3Animation 35s infinite normal ease-in-out forwards;
-			//-ms-animation: cloud3Animation 35s infinite normal ease-in-out forwards;
-			//-o-animation: cloud3Animation 35s infinite normal ease-in-out forwards;
-		//}
 		&.cloud4 { 
 			background-position:-130px -191px;
 			width:226px;
@@ -715,6 +594,10 @@ nav {
 				height:25px;
 				display:inline-block;
 			}
+			&:hover {
+				@include gradient-linear(#5f99d9, #114180);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f99d9', endColorstr='#114180',GradientType=0);
+			}
 		}
 	}
 }
@@ -745,14 +628,14 @@ nav {
 	left:-50px; 
 }
 .elements.sphere3 { 
-	background-position:-761px -5px; 
+	background-position:-761px -6px; 
 	width:200px; 
 	height:200px; 
 	top:-190px;
 	right:0; 
 }
 .elements.sphere4 { 
-	background-position:-783px -226px;
+	background-position:-783px -228px;
 	width:176px; 
 	height:176px; 
 	top:-100px;
@@ -972,7 +855,6 @@ dl.tabs {
 		position:absolute; 
 		right:0;
 		bottom:0;
-		//overflow:hidden;
 		width:40%;
 		height:400px;
 	}
@@ -982,14 +864,12 @@ dl.tabs {
 		//background-image:url(../images/goal1-sprite.png);
 		background-repeat:no-repeat;
 		background-position:0 0;	
-		display:block;
+		//display:block;
 		display:none;
 		&.layer1 { 
 			background-image:url(../images/goal1-sprite1.png) !important;
 			width:727px;
 			height:750px;
-			//background-position:right bottom; 
-			//top:150px;
 			top:90% !important;
 			right:-460px;
 			z-index:3
@@ -1076,7 +956,6 @@ dl.tabs {
 		&.element1 { 
 			//background-image:url(../images/goal4-sprite.png);
 			background-position:130% 0px;
-			//background-attachment:fixed;
 			width:581px;
 			height:604px;
 			top:-75px;

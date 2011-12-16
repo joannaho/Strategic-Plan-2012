@@ -81,210 +81,6 @@
     top: 76px;
     left: 700px; } }
 
-@-webkit-keyframes cloud1Animation {
-  0% {
-    opacity: 0;
-    top: 500px;
-    left: -10px; }
-
-  20% {
-    opacity: 1; }
-
-  80% {
-    opacity: 0.9; }
-
-  100% {
-    opacity: 0;
-    top: 650px;
-    left: 20px;
-    -moz-transform: rotate(0deg); } }
-
-@-moz-keyframes cloud1Animation {
-  0% {
-    opacity: 0;
-    top: 500px;
-    left: -10px; }
-
-  20% {
-    opacity: 1; }
-
-  80% {
-    opacity: 0.9; }
-
-  100% {
-    opacity: 0;
-    top: 650px;
-    left: 20px;
-    -moz-transform: rotate(0deg); } }
-
-@-ms-keyframes cloud1Animation {
-  0% {
-    opacity: 0;
-    top: 500px;
-    left: -10px; }
-
-  20% {
-    opacity: 1; }
-
-  80% {
-    opacity: 0.9; }
-
-  100% {
-    opacity: 0;
-    top: 650px;
-    left: 20px;
-    -moz-transform: rotate(0deg); } }
-
-@-o-keyframes cloud1Animation {
-  0% {
-    opacity: 0;
-    top: 500px;
-    left: -10px; }
-
-  20% {
-    opacity: 1; }
-
-  80% {
-    opacity: 0.9; }
-
-  100% {
-    opacity: 0;
-    top: 650px;
-    left: 20px;
-    -moz-transform: rotate(0deg); } }
-
-@-webkit-keyframes cloud2Animation {
-  0% {
-    opacity: 0;
-    left: 791px;
-    top: 301px;
-    -moz-transform: rotate(9deg); }
-
-  20% {
-    opacity: 1; }
-
-  80% {
-    opacity: 0.9; }
-
-  100% {
-    opacity: 0;
-    left: 682px;
-    top: 140px;
-    -moz-transform: rotate(-18deg); } }
-
-@-moz-keyframes cloud2Animation {
-  0% {
-    opacity: 0;
-    left: 791px;
-    top: 301px;
-    -moz-transform: rotate(9deg); }
-
-  20% {
-    opacity: 1; }
-
-  80% {
-    opacity: 0.9; }
-
-  100% {
-    opacity: 0;
-    left: 682px;
-    top: 140px;
-    -moz-transform: rotate(-18deg); } }
-
-@-ms-keyframes cloud2Animation {
-  0% {
-    opacity: 0;
-    left: 791px;
-    top: 301px;
-    -moz-transform: rotate(9deg); }
-
-  20% {
-    opacity: 1; }
-
-  80% {
-    opacity: 0.9; }
-
-  100% {
-    opacity: 0;
-    left: 682px;
-    top: 140px;
-    -moz-transform: rotate(-18deg); } }
-
-@-o-keyframes cloud2Animation {
-  0% {
-    opacity: 0;
-    left: 791px;
-    top: 301px;
-    -moz-transform: rotate(9deg); }
-
-  20% {
-    opacity: 1; }
-
-  80% {
-    opacity: 0.9; }
-
-  100% {
-    opacity: 0;
-    left: 682px;
-    top: 140px;
-    -moz-transform: rotate(-18deg); } }
-
-@-webkit-keyframes cloud3Animation {
-  0% {
-    left: 405px; }
-
-  20% {
-    opacity: 1; }
-
-  80% {
-    opacity: 0.9; }
-
-  100% {
-    left: 650px;
-    opacity: 0; } }
-
-@-moz-keyframes cloud3Animation {
-  0% {
-    left: 405px; }
-
-  20% {
-    opacity: 1; }
-
-  80% {
-    opacity: 0.9; }
-
-  100% {
-    left: 650px;
-    opacity: 0; } }
-
-@-ms-keyframes cloud3Animation {
-  0% {
-    left: 405px; }
-
-  20% {
-    opacity: 1; }
-
-  80% {
-    opacity: 0.9; }
-
-  100% {
-    left: 650px;
-    opacity: 0; } }
-
-@-o-keyframes cloud3Animation {
-  0% {
-    left: 405px; }
-
-  20% {
-    opacity: 1; }
-
-  80% {
-    opacity: 0.9; }
-
-  100% {
-    left: 650px;
-    opacity: 0; } }
-
 @-webkit-keyframes cloud4Animation {
   0% {
     opacity: 0;
@@ -467,12 +263,12 @@ header {
 
 .hd {
   position: relative;
-  z-index: 9999; }
+  z-index: 2000; }
   .hd .row:after {
     clear: none; }
   .hd .acslogo {
     position: absolute;
-    z-index: 9999;
+    z-index: 2000;
     top: 14px;
     left: 16px;
     background: transparent url("../images/acs-logo.png") no-repeat scroll 0 0;
@@ -488,7 +284,7 @@ header {
     position: relative;
     display: inline-block;
     float: left;
-    z-index: 9999; }
+    z-index: 2000; }
   .hd .hd-corner:before {
     content: "";
     position: absolute;
@@ -682,9 +478,7 @@ nav {
     -moz-transition: all 2s linear;
     -o-transition: all 2s linear;
     -ms-transition: all 2s linear;
-    transition: all 2s linear;
-    top: 301px;
-    left: 791px; }
+    transition: all 2s linear; }
     #corevalue .sprite.windill.lrg {
       background-position: -15px -3px;
       width: 90px;
@@ -849,6 +643,15 @@ nav {
         width: 30px;
         height: 25px;
         display: inline-block; }
+      #goals .hex a:hover {
+        background-color: #114180;
+        background: -moz-linear-gradient(#5f99d9, #114180);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5f99d9), to(#114180));
+        background: -webkit-linear-gradient(#5f99d9, #114180);
+        background: -o-linear-gradient(#5f99d9, #114180);
+        background: -ms-linear-gradient(top, #5f99d9 0%, #114180 100%);
+        background: linear-gradient(top, #5f99d9 0%, #114180 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5f99d9', endColorstr='#114180',GradientType=0); }
 
 .elements {
   background-color: transparent;
@@ -874,14 +677,14 @@ nav {
   left: -50px; }
 
 .elements.sphere3 {
-  background-position: -761px -5px;
+  background-position: -761px -6px;
   width: 200px;
   height: 200px;
   top: -190px;
   right: 0; }
 
 .elements.sphere4 {
-  background-position: -783px -226px;
+  background-position: -783px -228px;
   width: 176px;
   height: 176px;
   top: -100px;
@@ -1113,7 +916,6 @@ dl.tabs {
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: 0 0;
-    display: block;
     display: none; }
     #goal1 .goal-intro .sprite.layer1 {
       background-image: url(../images/goal1-sprite1.png) !important;
