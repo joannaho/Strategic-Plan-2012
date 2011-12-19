@@ -183,7 +183,6 @@ $(document).ready(function() {
 				$navG3.addClass('current').siblings('.current').removeClass('current');
 			}
 			if(/msie|MSIE 6/.test(navigator.userAgent)) {
-				//do nothing
 			}else {
 				if(windowWidth > 750 && $goal3sprite.css('background-image') == 'none'){
 	    			$('<img/>').attr('src',"images/goal3-sprite.png").load(function(){

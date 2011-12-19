@@ -323,13 +323,13 @@ nav {
 			color:$acsdarkyellow; 
 			position:absolute;
 			top:65px;
-			left:454px;
+			left:45%;
 		}
 	}
 	.vision, .mission { 
 		position:relative;
 		top:80px;
-		left:155px;
+		left:10%;
 		float:left;
 		width:260px;
 		clear:both;
@@ -350,8 +350,8 @@ nav {
 	}
 	h1 { 
 		position:relative;
-		font-size:6em;
-		font-weight:100;
+		font-size:5em;
+		font-weight:200;
 		text-align:center !important;
 		left:220px;
 		top:200px;
@@ -376,11 +376,13 @@ nav {
 	}
 	.col-l { 
 		float:left;
-		left:155px;
+		//left:155px;
+		left:17%;
 	}
 	.col-r {
 		float:left; 
-		left:425px;
+		//left:425px;
+		left:43%;
 	}
 	ul { margin:0.75em 0 2.5em;
 		li {
@@ -403,7 +405,7 @@ nav {
 		display:block;
 		z-index:3;
 		@include transition(all ,2s, linear);
-		&.windill {
+		&.windmill {
 			&.lrg { 
 				background-position:-15px -3px;
 				width:90px;
@@ -508,7 +510,7 @@ nav {
 		z-index:999;
 		h1 { 
 			color:$acsdarkblue;
-			font-size:7em;
+			font-size:6em;
 			font-weight:100;
 		}
 		span { font-size:2em; }
@@ -805,7 +807,17 @@ dl.tabs {
 		display:block;
 		margin:6px auto 0;
 	}
-	&.video span { background-position:-1px -33px; }
+	&.video {
+		span { background-position:-1px -33px; }
+		.label { 
+			background:none; 
+			position:relative; 
+			left:41px;
+			top:-26px;
+			width:100px; 
+			display:none;
+		}
+	}
 	&.charts span { background-position:2px -65px; }
 	&.chat span { background-position:1px -96px; }
 }
@@ -964,8 +976,55 @@ dl.tabs {
 /*--------------------------------------------------
 :: Media Queries
 -------------------------------------------------- */
-@media only screen and (max-width: 900px) {
-	.goal-intro .row { top:210px; }
+/* iPad [portrait + landscape] */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	#visionmission {
+		.title {
+			.sp12 { left:7%; }
+			.andbeyond { left:39%; }
+		}
+		.vision, .mission { left:7%; } 
+	}
+	#corevalue { 
+		.graphic-earth { 
+			margin:0 -5%;
+		}
+		.sprite {
+			&.windmill { 
+				&.lrg { left:380px; 
+					&.btm { left:699px; }
+				}
+				&.med { left:374px; 
+					&.btm { left:710px; }
+				}
+				&.sm { left:371px; 
+					&.btm { left:724px; }
+				}
+			}
+		}
+		.col-l { left:15%; }
+		.col-r { left:47%; }
+	}
+	#goals {
+		.preamble { left:7%; width:420px; }
+		.hex { z-index:2; }
+	}
+	.elements.sphere2 { display:none !important; }
+	.elements.sphere5 {left:90%; }
+	
+	.goal-intro .row { top:190px; }
+	
+	#goal1 {
+		.goal-intro { 
+			background-position:52% 66px;
+			#parallax { right:-23%; }
+		}
+	}
+	#goal2 { 
+		.goal-intro {
+			.sprite-wrap { top:-167px; }
+		}
+	}
 	#goal3 .goal-intro {
 		.sprite { 
 			right:-20%;
@@ -975,6 +1034,14 @@ dl.tabs {
 		.sprite { 
 			&.element1 { 
 				right:-35%;
+			}
+		}
+	}
+	.progress-block { background-image:none !important; }
+	.extras a { 
+		&.video {
+			.label { 
+				display:block;
 			}
 		}
 	}
@@ -1114,9 +1181,9 @@ dl.tabs {
 		min-height:350px !important;
 		.bg { background-image:none !important; }
 		.row { 
-			top:50px !important;
+			top:30px !important;
 			.goalNum { 
-				margin-bottom:0.5em;
+				margin-bottom:0em;
 				font-size:200% !important;
 				.num { font-size:450% !important; }
 			}
@@ -1133,7 +1200,9 @@ dl.tabs {
 		.four { text-align:center; padding-bottom:2em; }
 	}
 	.progress { margin:1.25em 0 2em; }
-	.progress-block { min-height:260px;
+	.progress-block { 
+		min-height:260px;
+		background-image:none !important;
 		.desc { font-size:1.15em; }
 	}
 	

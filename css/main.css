@@ -121,29 +121,29 @@ nav select { display: none; margin-top: 5px; width: 100px; }
 #visionmission { z-index: 3; background: url("../images/home-bg.gif") repeat-x scroll left bottom; display: block; height: 330px; clear: both; padding-top: 8em; }
 #visionmission .title { font-size: 6em; font-weight: 200; position: relative; top: 50px; }
 #visionmission .title .sp12 { color: #0153a5; position: relative; left: 15%; }
-#visionmission .title .andbeyond { color: #e5b100; position: absolute; top: 65px; left: 454px; }
-#visionmission .vision, #visionmission .mission { position: relative; top: 80px; left: 155px; float: left; width: 260px; clear: both; margin-bottom: 0.5em; }
+#visionmission .title .andbeyond { color: #e5b100; position: absolute; top: 65px; left: 45%; }
+#visionmission .vision, #visionmission .mission { position: relative; top: 80px; left: 10%; float: left; width: 260px; clear: both; margin-bottom: 0.5em; }
 #visionmission .vision h4, #visionmission .mission h4 { text-transform: uppercase; }
 
 #corevalue { z-index: 1; height: 950px; color: #fff !important; font-size: 1em; text-shadow: 0 3px 20px #000000, 0 1px 5px #000000, 0 1px 5px #000000; }
 #corevalue div, #corevalue h1, #corevalue p { position: relative; z-index: 2; }
-#corevalue h1 { position: relative; font-size: 6em; font-weight: 100; text-align: center !important; left: 220px; top: 200px; width: 50%; color: #fff; }
+#corevalue h1 { position: relative; font-size: 5em; font-weight: 200; text-align: center !important; left: 220px; top: 200px; width: 50%; color: #fff; }
 #corevalue h5 { color: #fff; line-height: 1.2em; }
 #corevalue p { position: relative; top: 185px; left: 271px; font-size: 120%; width: 40%; }
 #corevalue .col-l, #corevalue .col-r { position: relative; top: 195px; width: 180px; }
-#corevalue .col-l { float: left; left: 155px; }
-#corevalue .col-r { float: left; left: 425px; }
+#corevalue .col-l { float: left; left: 17%; }
+#corevalue .col-r { float: left; left: 43%; }
 #corevalue ul { margin: 0.75em 0 2.5em; }
 #corevalue ul li { list-style-type: disc; margin: 0 0 0.25em 1em; }
 #corevalue .graphic-earth { background: url(../images/core-earth.jpg) no-repeat scroll 0 0; width: 905px; height: 978px; display: block; margin: auto; position: absolute; z-index: 1; }
 #corevalue .sprite { position: absolute; background: transparent url(../images/core-sprite.png) no-repeat scroll 0 0; display: block; z-index: 3; -webkit-transition: all 2s linear; -moz-transition: all 2s linear; -o-transition: all 2s linear; -ms-transition: all 2s linear; transition: all 2s linear; }
-#corevalue .sprite.windill.lrg { background-position: -15px -3px; width: 90px; height: 90px; top: 31px; left: 418px; }
-#corevalue .sprite.windill.lrg.btm { top: 819px; left: 739px; }
-#corevalue .sprite.windill.med { background-position: -24px -112px; width: 61px; height: 61px; top: 87px; left: 412px; }
-#corevalue .sprite.windill.med.btm { top: 781px; left: 750px; }
-#corevalue .sprite.windill.sm { background-position: -36px -185px; width: 41px; height: 41px; top: 122px; left: 407px; }
-#corevalue .sprite.windill.sm.btm { top: 757px; left: 764px; }
-#corevalue .sprite.windill.animation { -moz-animation: windmillAnimation 5s infinite linear; -webkit-animation: windmillAnimation 20s infinite linear; -ms-animation: windmillAnimation 10s infinite linear; }
+#corevalue .sprite.windmill.lrg { background-position: -15px -3px; width: 90px; height: 90px; top: 31px; left: 418px; }
+#corevalue .sprite.windmill.lrg.btm { top: 819px; left: 739px; }
+#corevalue .sprite.windmill.med { background-position: -24px -112px; width: 61px; height: 61px; top: 87px; left: 412px; }
+#corevalue .sprite.windmill.med.btm { top: 781px; left: 750px; }
+#corevalue .sprite.windmill.sm { background-position: -36px -185px; width: 41px; height: 41px; top: 122px; left: 407px; }
+#corevalue .sprite.windmill.sm.btm { top: 757px; left: 764px; }
+#corevalue .sprite.windmill.animation { -moz-animation: windmillAnimation 5s infinite linear; -webkit-animation: windmillAnimation 20s infinite linear; -ms-animation: windmillAnimation 10s infinite linear; }
 #corevalue .sprite.balloon { background-position: 18px -247px; width: 126px; height: 101px; top: 98px; left: 680px; }
 #corevalue .sprite.balloon.animation { -moz-animation: balloonAnimation 3s infinite alternate linear both; -webkit-animation: balloonAnimation 3s infinite alternate linear both; -ms-animation: balloonAnimation 3s infinite alternate linear both; -o-animation: balloonAnimation 3s infinite alternate linear both; }
 #corevalue .sprite.cloud4 { background-position: -130px -191px; width: 226px; height: 277px; top: 470px; left: 745px; opacity: 0; }
@@ -153,7 +153,7 @@ nav select { display: none; margin-top: 5px; width: 100px; }
 
 #goals { z-index: 2; height: 950px; background-image: url("../images/goal-bg.gif"); background-repeat: repeat-x; background-position: left bottom; padding: 0; font-size: 1.15em; }
 #goals .preamble { position: absolute; top: 120px; left: 150px; float: left; width: 450px; z-index: 999; }
-#goals .preamble h1 { color: #0153a5; font-size: 7em; font-weight: 100; }
+#goals .preamble h1 { color: #0153a5; font-size: 6em; font-weight: 100; }
 #goals .preamble span { font-size: 2em; }
 #goals .hexwrap { position: relative; float: right; }
 #goals .hex { position: absolute; background-color: transparent; background-image: url("../images/goals-sprite-hex.png"); background-repeat: no-repeat; width: 265px; height: 232px; padding: 40px; color: #fff; text-align: center; font-size: 1.15em; }
@@ -223,6 +223,7 @@ dl.tabs { margin: 2.5em 0 1.5em; }
 .extras a { background: #555555; /* Old browsers */ /* IE9 SVG, needs conditional override of 'filter' to 'none' */ background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU1NTU1NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMjIyMjIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+); background: -moz-linear-gradient(top, #555555 0%, #222222 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #555555), color-stop(100%, #222222)); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(top, #555555 0%, #222222 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(top, #555555 0%, #222222 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(top, #555555 0%, #222222 100%); /* IE10+ */ background: linear-gradient(top, #555555 0%, #222222 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#222222',GradientType=0 ); /* IE6-8 */ border-radius: 50px; width: 36px; height: 36px; display: inline-block; margin-right: 5px; cursor: pointer; }
 .extras a span { background: transparent url("../images/sprite.png") no-repeat scroll 100px 100px; width: 24px; height: 24px; display: block; margin: 6px auto 0; }
 .extras a.video span { background-position: -1px -33px; }
+.extras a.video .label { background: none; position: relative; left: 41px; top: -26px; width: 100px; display: none; }
 .extras a.charts span { background-position: 2px -65px; }
 .extras a.chat span { background-position: 1px -96px; }
 
@@ -264,9 +265,31 @@ dl.tabs { margin: 2.5em 0 1.5em; }
 /*--------------------------------------------------
 :: Media Queries
 -------------------------------------------------- */
-@media only screen and (max-width: 900px) { .goal-intro .row { top: 210px; }
+/* iPad [portrait + landscape] */
+@media only screen and (min-width: 768px) and (max-width: 1024px) { #visionmission .title .sp12 { left: 7%; }
+  #visionmission .title .andbeyond { left: 39%; }
+  #visionmission .vision, #visionmission .mission { left: 7%; }
+  #corevalue .graphic-earth { margin: 0 -5%; }
+  #corevalue .sprite.windmill.lrg { left: 380px; }
+  #corevalue .sprite.windmill.lrg.btm { left: 699px; }
+  #corevalue .sprite.windmill.med { left: 374px; }
+  #corevalue .sprite.windmill.med.btm { left: 710px; }
+  #corevalue .sprite.windmill.sm { left: 371px; }
+  #corevalue .sprite.windmill.sm.btm { left: 724px; }
+  #corevalue .col-l { left: 15%; }
+  #corevalue .col-r { left: 47%; }
+  #goals .preamble { left: 7%; width: 420px; }
+  #goals .hex { z-index: 2; }
+  .elements.sphere2 { display: none !important; }
+  .elements.sphere5 { left: 90%; }
+  .goal-intro .row { top: 190px; }
+  #goal1 .goal-intro { background-position: 52% 66px; }
+  #goal1 .goal-intro #parallax { right: -23%; }
+  #goal2 .goal-intro .sprite-wrap { top: -167px; }
   #goal3 .goal-intro .sprite { right: -20%; }
-  #goal4 .goal-intro .sprite.element1 { right: -35%; } }
+  #goal4 .goal-intro .sprite.element1 { right: -35%; }
+  .progress-block { background-image: none !important; }
+  .extras a.video .label { display: block; } }
 @media only screen and (max-width: 767px) { .block-grid.mobile.four-up li { float: left; width: 48%; margin-left: 2%; }
   header { background-position: 0 0; min-height: 45px; }
   header .hd .acslogo { display: none; }
@@ -306,8 +329,8 @@ dl.tabs { margin: 2.5em 0 1.5em; }
   .elements, .sprite { display: none !important; }
   .goal-intro { background-image: none !important; max-height: 350px !important; min-height: 350px !important; }
   .goal-intro .bg { background-image: none !important; }
-  .goal-intro .row { top: 50px !important; }
-  .goal-intro .row .goalNum { margin-bottom: 0.5em; font-size: 200% !important; }
+  .goal-intro .row { top: 30px !important; }
+  .goal-intro .row .goalNum { margin-bottom: 0em; font-size: 200% !important; }
   .goal-intro .row .goalNum .num { font-size: 450% !important; }
   .goal-intro .row .goalHd { text-align: center; }
   .goal-intro .row .goalHd h2 { font-size: 200% !important; }
@@ -316,7 +339,7 @@ dl.tabs { margin: 2.5em 0 1.5em; }
   .tabs-content { font-size: 1.15em; }
   .goal-content .four { text-align: center; padding-bottom: 2em; }
   .progress { margin: 1.25em 0 2em; }
-  .progress-block { min-height: 260px; }
+  .progress-block { min-height: 260px; background-image: none !important; }
   .progress-block .desc { font-size: 1.15em; }
   .reveal-modal { top: 0.5%; } }
 @media only screen and (max-width: 320px) { .progress-block { min-height: 220px; }
