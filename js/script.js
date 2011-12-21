@@ -251,7 +251,7 @@ $(document).ready(function() {
 		var $this = $(this);
 		var sectionID = $this.closest('section').attr('id');
 		if($this.hasClass('video')){
-			$f(sectionID +"player", "http://assets.machost/prod/js/plugins/flowplayer/flowplayer.commercial.acs-3.2.7.swf", {
+			$f(sectionID +"player", "https://assets.acs.org/prod/js/plugins/flowplayer/flowplayer.commercial.acs-3.2.7.swf", {
 				clip: { 
 					autoPlay:false
 				},
