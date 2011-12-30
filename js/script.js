@@ -214,11 +214,12 @@ $(document).ready(function() {
 	if(/msie|MSIE 6/.test(navigator.userAgent)) {
 	}else { 
 		//goal 1 parallax
-	  	jQuery('#goal1 #parallax .sprite').parallax(
+	  	jQuery('#goal1 #parallax .parallax-layer').parallax(
 	  		{}, //{mouseport: jQuery("#goal1 #parallax")},
 	  		{xparallax:false, xtravel:'10px' ,ytravel:'20px'}, //layer 0
-	  		{xparallax:true, xtravel:'20px'}, //layer 1
-	  		{xparallax:false, xtravel:'5px', ytravel:'5px'} //layer 2
+	  		{xparallax:true, xtravel:'20px', ytravel:'50px'}, //layer 1
+	  		{xparallax:false, xtravel:'5px', ytravel:'5px'}, //layer 2
+	  		{yparallax:false, xtravel:'20px'}
 	  	);
 	}
 

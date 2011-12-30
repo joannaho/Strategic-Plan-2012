@@ -88,7 +88,7 @@ header { position: fixed; top: 0; width: 100%; z-index: 9998; background: url(..
 .hd { position: relative; z-index: 2000; }
 .hd .row:after { clear: none; }
 .hd .acslogo { position: absolute; z-index: 2000; top: 14px; left: 16px; background: transparent url("../images/acs-logo.png") no-repeat scroll 0 0; width: 157px; height: 54px; }
-.hd .acstext { font-weight: bold; display: none; font-size: 0.9em; }
+.hd .acstext { font-weight: normal; font-size: 1em; position: absolute; top: 52px; right: 0; }
 .hd .hd-corner { width: 195px; height: 60px; background: #fff; position: relative; display: inline-block; float: left; z-index: 2000; }
 .hd .hd-corner:before { content: ""; position: absolute; top: -25px; left: 0; width: 0; height: 0; border-left: 50px solid transparent; border-right: 50px solid transparent; border-bottom: 25px solid #fff; }
 .hd .hd-corner:after { content: ""; position: absolute; bottom: -50px; left: 0; width: 0; height: 0; border-left: 98px solid transparent; border-right: 98px solid transparent; border-top: 50px solid #fff; }
@@ -239,9 +239,10 @@ dl.tabs dd a.active, dl.tabs dd a:hover { color: #226ABC; font-weight: bold; }
 #goal1 .goal-intro .bg { position: absolute; background-repeat: no-repeat; background-position: 75% 20px; background-attachment: fixed; width: 100%; height: 401px; display: none; }
 #goal1 .goal-intro #parallax { position: absolute; right: 0; bottom: 0; width: 40%; height: 400px; }
 #goal1 .goal-intro .sprite { position: absolute; background-color: transparent; background-repeat: no-repeat; background-position: 0 0; display: none; }
-#goal1 .goal-intro .sprite.layer1 { background-image: url(../images/goal1-sprite1.png) !important; width: 727px; height: 750px; top: 90% !important; right: -460px; z-index: 3; }
+#goal1 .goal-intro .sprite.layer1 { background-image: url(../images/goal1-sprite1.png) !important; width: 727px; height: 750px; top: 90% !important; right: -460px; z-index: 4; }
 #goal1 .goal-intro .sprite.layer2 { width: 500px; height: 565px; background-position: -11px -24px; right: -40px; z-index: 2; }
 #goal1 .goal-intro .sprite.layer3 { width: 626px; height: 760px; background-position: -515px -1px; top: -90px; right: -90px !important; z-index: 1; }
+#goal1 .goal-intro .sprite.layer4 { width: 350px; height: 255px; background-position: -959px -478px; top: 46%; right: 230px !important; z-index: 3; }
 
 #goal2 .goal-intro { background: #111; }
 #goal2 .goal-intro .sprite-wrap { position: relative; top: -137px; margin: 0 auto; width: 1280px; height: 400px; }
@@ -305,7 +306,7 @@ dl.tabs dd a.active, dl.tabs dd a:hover { color: #226ABC; font-weight: bold; }
   header { background-position: 0 0; min-height: 45px; }
   header .hd .acslogo { display: none; }
   header .hd .hd-corner { display: none; }
-  header .hd .acstext { display: inline-block; float: left; margin-top: 7px; }
+  header .hd .acstext { display: inline-block; float: left; margin-top: 7px; font-weight: bold; font-size: 0.9em; }
   header nav { top: 1px; width: auto; }
   header nav ul { display: none; }
   header nav select { display: inline-block; }

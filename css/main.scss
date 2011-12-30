@@ -192,9 +192,11 @@ header {
 		height:54px;
 	}
 	.acstext { 
-		font-weight:bold; 
-		display:none; 
-		font-size:0.9em; 
+		font-weight:normal; 
+		font-size:1em; 
+		position:absolute;
+		top:52px;
+		right:0;
 	}
 	.hd-corner { 
 		width: 195px; 
@@ -325,6 +327,7 @@ nav {
 		color:#fff; 
 	}
 }
+
 
 // -----------------------------------------
 //   Core Value
@@ -909,7 +912,7 @@ dl.tabs { margin:2.5em 0 1.5em;
 			height:750px;
 			top:90% !important;
 			right:-460px;
-			z-index:3
+			z-index:4;
 		}
 		&.layer2 { 
 			width:500px;
@@ -925,6 +928,14 @@ dl.tabs { margin:2.5em 0 1.5em;
 			top:-90px;
 			right:-90px !important;
 			z-index:1;
+		}
+		&.layer4 { 
+			width:350px;
+			height:255px;
+			background-position:-959px -478px; 
+			top:46%;
+			right:230px !important;
+			z-index:3;
 		}
 	}		
 }
@@ -1106,20 +1117,24 @@ dl.tabs { margin:2.5em 0 1.5em;
 
 @media only screen and (max-width: 767px) {
 	.block-grid.mobile.four-up li { float:left; width:48%; margin-left:2%; }
-	
 	.downloadpdf { 
 		right:0%;
 		top:20px;
 		float:none;
-	}
-	
+	}	
 	header { 
 		background-position:0 0; 
 		min-height:45px; 
 		.hd { 
 			.acslogo { display:none; }
 			.hd-corner { display:none; }
-			.acstext { display:inline-block; float:left; margin-top:7px; }
+			.acstext { 
+				display:inline-block; 
+				float:left; 
+				margin-top:7px; 
+				font-weight:bold; 
+				font-size:0.9em; 
+			}
 		}
 		nav { 
 			top:1px; 
