@@ -191,7 +191,11 @@ header {
 		width:157px;
 		height:54px;
 	}
-	.acstext { font-weight:bold; display:none; }
+	.acstext { 
+		font-weight:bold; 
+		display:none; 
+		font-size:0.9em; 
+	}
 	.hd-corner { 
 		width: 195px; 
 		height: 60px; 
@@ -295,7 +299,31 @@ nav {
 			&.gmain, &.core { border-left:1px solid #E0C472; }
 		}
 	}
-	select { display:none; margin-top:5px; width:100px; }
+	select { 
+		display:none;
+		margin-top:5px; 
+		width:100px; 
+	}
+}
+.downloadpdf { 
+	position:relative;
+	right:12%;
+	top:140px;
+	float:right;
+	display:block;
+	width:112px;
+	height:20px;
+	padding:12px 10px 8px 48px;
+	background:transparent url(../images/btn-download.png) no-repeat scroll 0 0;
+	color:#fff;
+	font-size:1em;
+	text-transform:uppercase;
+	text-shadow:0 2px 1px #1B3C75;
+	box-shadow:0 1px 0px #fff;
+	&:hover { 
+		background-position:bottom left;
+		color:#fff; 
+	}
 }
 
 // -----------------------------------------
@@ -317,13 +345,13 @@ nav {
 		.sp12 { 
 			color:$acsdarkblue;
 			position:relative; 
-			left:15%;
+			left:10%;
 		}
 		.andbeyond { 
 			color:$acsdarkyellow; 
 			position:absolute;
 			top:65px;
-			left:45%;
+			left:47%;
 		}
 	}
 	.vision, .mission { 
@@ -334,7 +362,7 @@ nav {
 		width:260px;
 		clear:both;
 		margin-bottom:0.5em;
-		h4 { text-transform:uppercase; }
+		h3 { text-transform:uppercase; }
 	}
 }
 
@@ -354,11 +382,11 @@ nav {
 	}
 	h1 { 
 		position:relative;
-		font-size:5em;
+		font-size:3.75em;
 		font-weight:200;
 		text-align:center !important;
 		left:220px;
-		top:200px;
+		top:210px;
 		width:50%;
 		color:#fff;
 	}
@@ -368,24 +396,22 @@ nav {
 	}
 	p { 
 		position:relative;
-		top:185px;
+		top:210px;
 		left:271px;
 		font-size:120%;
 		width:40%; 
 	}
 	.col-l, .col-r { 
 		position:relative;
-		top:195px;
+		top:220px;
 		width:180px; 
 	}
 	.col-l { 
 		float:left;
-		//left:155px;
 		left:17%;
 	}
 	.col-r {
 		float:left; 
-		//left:425px;
 		left:43%;
 	}
 	ul { margin:0.75em 0 2.5em;
@@ -645,18 +671,23 @@ nav {
 	left:87%;
 	top:130px;
 	z-index:3;
+	@include transition(all ,2s, linear);
 }	
 
 // -----------------------------------------
 //   Goals Detail
 //----------------------------------------- */
-dl.tabs dd a { 
-	border:1px solid #ccc;
-	color:#444;
-	padding:0 15px;
-	&.active { 
-		color:#226ABC;
-		font-weight:bold;
+dl.tabs { margin:2.5em 0 1.5em;
+	dd { 
+		a { 
+			border:1px solid #ccc;
+			color:#444;
+			padding:0 15px;
+			&.active, &:hover { 
+				color:#226ABC;
+				font-weight:bold;
+			}
+		}
 	}
 }
 
@@ -702,16 +733,15 @@ dl.tabs dd a {
 	}
 }
 
-dl.tabs { 
-	margin:2.5em 0 1.5em;
-}
 .tabs-content { 
 	clear:both;
 	h6 { margin-left:15px; display:none; }
 	li { margin-bottom:0;
-		li { 
-			list-style:disc;
-			margin-bottom:12px;
+		ul { 
+			li { 
+				list-style:disc;
+				margin-bottom:12px;
+			}
 		}
 	}
 }
@@ -983,6 +1013,21 @@ dl.tabs {
 -------------------------------------------------- */
 /* iPad [portrait + landscape] */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+	nav { 
+		ul { 
+			li { 
+				&.downloadpdf { margin-left:0;
+					a { 
+						background-position:5px -123px;
+						padding-right:0;
+						height:15px;
+						span { display:none; }
+					}
+				}
+			}
+		}
+	}
+	
 	#visionmission {
 		.title {
 			.sp12 { left:7%; }
@@ -1036,7 +1081,7 @@ dl.tabs {
 	}
 	#goal3 .goal-intro {
 		.sprite { 
-			right:-20%;
+			right:-9%;
 		}
 	}
 	#goal4 .goal-intro {
@@ -1061,6 +1106,12 @@ dl.tabs {
 
 @media only screen and (max-width: 767px) {
 	.block-grid.mobile.four-up li { float:left; width:48%; margin-left:2%; }
+	
+	.downloadpdf { 
+		right:0%;
+		top:20px;
+		float:none;
+	}
 	
 	header { 
 		background-position:0 0; 
@@ -1099,7 +1150,7 @@ dl.tabs {
 			}
 		}
 		.vision, .mission { 
-			top:30px;
+			top:50px;
 			left:0;
 			width:100%;
 		}
@@ -1110,6 +1161,7 @@ dl.tabs {
 		height:auto;
 		text-shadow:none;
 		color:#333 !important;
+		.row { left:0; }
 		p {
 			top:0; left:0;
 			width:100%;
@@ -1223,11 +1275,17 @@ dl.tabs {
 
 
 @media only screen and (max-width: 320px) {
-	#corevalue { 
-		.row { left:0; }
-	}
 	#goals { 
 		.hexwrap { left:0; }
+	}
+	dl.tabs { 
+		dd { width:100%; }
+	}
+	.tabs-content { 
+		border:1px solid #ccc;
+		padding-top:1em;
+		padding-bottom:1em;
+		ul { margin:4px 10px 5px 30px; }
 	}
 	.progress-block { 
 		min-height:220px;

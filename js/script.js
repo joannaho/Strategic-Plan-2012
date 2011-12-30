@@ -245,30 +245,51 @@ $(document).ready(function() {
 
 	//Lightbox 
 	var $extraBtn = $('.extras a');
+	var flowplayerLoadCount = 0;
 	$extraBtn.live('click', revealBox);
 
 	function revealBox(e){
 		var $this = $(this);
 		var sectionID = $this.closest('section').attr('id');
 		if($this.hasClass('video')){
-			$f(sectionID +"player", "https://assets.acs.org/prod/js/plugins/flowplayer/flowplayer.commercial.acs-3.2.7.swf", {
-				clip: { 
-					autoPlay:false
-				},
-				key:['#@e4613dc7b69a222c719','#@5f4e5f81f209168003b']
-			});
+			if(flowplayerLoadCount == 0){
+				$f(sectionID +"player", "https://assets.acs.org/prod/js/plugins/flowplayer/flowplayer.commercial.acs-3.2.7.swf", {
+					clip: { 
+						autoPlay:false,
+					},
+					plugins: {
+						controls: {
+							url: "https://assets.acs.org/prod/js/plugins/flowplayer/flowplayer.controls-3.2.5.swf"
+						},
+						audio: { 
+							url: "https://assets.acs.org/prod/js/plugins/flowplayer/plugins/flowplayer.audio-3.2.1.swf"
+						},
+						gatracker: {
+							url: "https://assets.acs.org/prod/js/plugins/flowplayer/plugins/flowplayer.analytics-3.2.1.swf",
+							googleId: "UA-6067916-1",
+							trackingMode: "AS3",
+							debug: false
+						}				
+					},
+					key:['#@e4613dc7b69a222c719','#@5f4e5f81f209168003b']
+				});
+				flowplayerLoadCount ++;
+			}
 			$this.closest('section').find('.video-box').reveal();
 			$('.close-reveal-modal').live('click', closeReveal);
 			$('.reveal-modal-bg').live('click', closeReveal);	
-		}
-		else if($this.hasClass('charts')){
-			$this.closest('section').find('.charts-box').reveal();
 		}
 		
 		function closeReveal(e){
 			$('.close-reveal-modal').die('click', closeReveal);
 			$('.reveal-modal-bg').die('click', closeReveal);	
-			$f(sectionID +"player").stop();
+			try { 
+				$f("*").each(function(){ 
+					this.stop();
+				});
+			} catch (error){ 
+				return true;
+			}
 		}
 	}
 	
