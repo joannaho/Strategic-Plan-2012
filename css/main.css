@@ -306,7 +306,7 @@ dl.tabs dd a.active, dl.tabs dd a:hover { color: #226ABC; font-weight: bold; }
   header { background-position: 0 0; min-height: 45px; }
   header .hd .acslogo { display: none; }
   header .hd .hd-corner { display: none; }
-  header .hd .acstext { display: inline-block; float: left; margin-top: 7px; font-weight: bold; font-size: 0.9em; }
+  header .hd .acstext { position: relative; top: 0; float: left; display: inline-block; margin-top: 7px; font-weight: bold; font-size: 0.9em; }
   header nav { top: 1px; width: auto; }
   header nav ul { display: none; }
   header nav select { display: inline-block; }

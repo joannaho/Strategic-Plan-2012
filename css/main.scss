@@ -1129,8 +1129,10 @@ dl.tabs { margin:2.5em 0 1.5em;
 			.acslogo { display:none; }
 			.hd-corner { display:none; }
 			.acstext { 
-				display:inline-block; 
+				position:relative;
+				top:0;
 				float:left; 
+				display:inline-block; 
 				margin-top:7px; 
 				font-weight:bold; 
 				font-size:0.9em; 
