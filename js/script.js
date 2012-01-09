@@ -254,8 +254,8 @@ $(document).ready(function() {
 		try {		
 			if($this.hasClass('video')){
 				$f(sectionID +"player", "https://assets.acs.org/prod/js/plugins/flowplayer/flowplayer.commercial.acs-3.2.7.swf", {
-					'clip': { 
-						'autoPlay':'false',
+					clip: { 
+						autoPlay:false
 					},
 					plugins: {
 						controls: {
@@ -272,6 +272,7 @@ $(document).ready(function() {
 						}				
 					},
 					key:['#@e4613dc7b69a222c719','#@5f4e5f81f209168003b']
+				
 				});
 				
 				$this.closest('section').find('.video-box').reveal();
