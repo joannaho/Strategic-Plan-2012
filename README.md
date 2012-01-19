@@ -1,4 +1,9 @@
-12-30-2012 -	added download pdf button, adjusted css for mobile, added extra parallex image under goal 1, added "American Chemical Society" to header per Madeleine's request.
-				(Known bug: when click play video button, after the shadow box open and you click X to close, the video will continue to play. Flowplayer $f("*").stop(); not working. But was working a week ago, strange.)
+# Strategic Plan Website 2012
+A responsive single page microsite which contain the official strategic plan for the American Chemical Society.
+http://strategy.acs.org
 
-01-02-2012 -	play video lightbox fixed 
+When deploying this site, please contact Luis Descaire and request that he manualy copy the files across the acswebcontent server cluster. The automated sync script is not working reliably.
+
+## Contacts
+* Authored by Joanna Lit
+* Updated and Maintained by Tamara Coombs
